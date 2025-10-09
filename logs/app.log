@@ -44,3 +44,374 @@
 2025-10-08T15:47:23.141+02:00 DEBUG 14300 --- [demo] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2025-10-08T15:47:23.142+02:00 DEBUG 14300 --- [demo] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{success=false, message=Usuario o contraseña incorrectos}]
 2025-10-08T15:47:23.148+02:00 DEBUG 14300 --- [demo] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-09T15:23:28.515+02:00  INFO 11512 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 11512 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:23:28.516+02:00  INFO 11512 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:23:29.067+02:00  INFO 11512 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:23:29.078+02:00  INFO 11512 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:23:29.078+02:00  INFO 11512 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:23:29.115+02:00  INFO 11512 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:23:29.115+02:00  INFO 11512 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2025-10-09T15:23:29.234+02:00 DEBUG 11512 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:23:29.277+02:00 DEBUG 11512 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:23:29.291+02:00 DEBUG 11512 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:23:29.318+02:00 DEBUG 11512 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:23:29.377+02:00  INFO 11512 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T15:23:29.382+02:00  INFO 11512 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.182 seconds (process running for 1.39)
+2025-10-09T15:25:17.730+02:00  INFO 11512 --- [demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T15:25:17.730+02:00  INFO 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T15:25:17.731+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T15:25:17.731+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T15:25:17.731+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T15:25:17.732+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2b0b76f9
+2025-10-09T15:25:17.732+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2ac18fc1
+2025-10-09T15:25:17.733+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T15:25:17.733+02:00  INFO 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-09T15:25:17.741+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:25:17.751+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-09T15:25:17.759+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-09T15:25:17.764+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource nurse/index.]
+2025-10-09T15:25:17.765+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:25:17.772+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-09T15:25:17.774+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-09T15:25:17.802+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:25:17.804+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 09 15:25:17 CEST 2025, status=404, error=Not Found, path=/nurse/index}]
+2025-10-09T15:25:17.843+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-09T15:26:44.028+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2025-10-09T15:26:44.028+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-09T15:26:44.029+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-09T15:26:44.030+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource login.]
+2025-10-09T15:26:44.030+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:26:44.030+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2025-10-09T15:26:44.031+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-09T15:26:44.031+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:26:44.032+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 09 15:26:44 CEST 2025, status=404, error=Not Found, path=/login}]
+2025-10-09T15:26:44.032+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-09T15:27:10.039+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/nurse/login", parameters={}
+2025-10-09T15:27:10.039+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#login(Map)
+2025-10-09T15:27:10.066+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{username=jdoe, password=1234}]
+2025-10-09T15:27:10.074+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:27:10.074+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{success=true, message=Login correcto}]
+2025-10-09T15:27:10.075+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-09T15:48:35.328+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:48:35.329+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-09T15:48:35.332+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-09T15:48:35.333+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource nurse/index.]
+2025-10-09T15:48:35.333+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:48:35.334+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-09T15:48:35.334+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-09T15:48:35.335+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:48:35.335+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 09 15:48:35 CEST 2025, status=404, error=Not Found, path=/nurse/index}]
+2025-10-09T15:48:35.336+02:00 DEBUG 11512 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-09T15:48:52.387+02:00  INFO 16368 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 16368 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:48:52.388+02:00  INFO 16368 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:48:52.954+02:00  INFO 16368 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:48:52.964+02:00  INFO 16368 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:48:52.964+02:00  INFO 16368 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:48:52.995+02:00  INFO 16368 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:48:52.995+02:00  INFO 16368 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 576 ms
+2025-10-09T15:48:53.107+02:00 DEBUG 16368 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:48:53.148+02:00 DEBUG 16368 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:48:53.162+02:00 DEBUG 16368 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:48:53.187+02:00 DEBUG 16368 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:48:53.244+02:00  INFO 16368 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T15:48:53.249+02:00  INFO 16368 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.163 seconds (process running for 1.351)
+2025-10-09T15:49:00.381+02:00  INFO 16368 --- [demo] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T15:49:00.381+02:00  INFO 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T15:49:00.382+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T15:49:00.382+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T15:49:00.382+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T15:49:00.382+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@683fc455
+2025-10-09T15:49:00.382+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@53188142
+2025-10-09T15:49:00.383+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T15:49:00.383+02:00  INFO 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-09T15:49:00.388+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:49:00.395+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:49:00.459+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:49:00.460+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:49:00.461+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:49:39.434+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:49:39.435+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:49:39.438+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:49:39.438+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:49:39.438+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:49:47.976+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/getAllNurses", parameters={}
+2025-10-09T15:49:47.979+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-09T15:49:47.981+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-09T15:49:47.983+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource getAllNurses.]
+2025-10-09T15:49:47.983+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:49:47.987+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-09T15:49:47.988+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-09T15:49:47.996+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-09T15:49:48.000+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-09T15:49:48.040+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-10-09T15:49:48.040+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-09T15:49:48.041+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-10-09T15:49:48.042+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-09T15:49:48.042+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:49:48.042+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-09T15:49:48.042+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-09T15:49:48.046+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2025-10-09T15:49:48.047+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Oct 09 15:49:48 CEST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-10-09T15:49:48.058+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-10-09T15:49:56.164+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:49:56.164+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:49:56.166+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:49:56.166+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:49:56.167+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:49:58.027+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:49:58.027+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:49:58.029+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:49:58.029+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:49:58.029+02:00 DEBUG 16368 --- [demo] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:07.233+02:00  INFO 10344 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 10344 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:50:07.234+02:00  INFO 10344 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:50:07.811+02:00  INFO 10344 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:50:07.821+02:00  INFO 10344 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:50:07.821+02:00  INFO 10344 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:50:07.849+02:00  INFO 10344 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:50:07.850+02:00  INFO 10344 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 589 ms
+2025-10-09T15:50:07.964+02:00 DEBUG 10344 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:50:08.001+02:00 DEBUG 10344 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:50:08.014+02:00 DEBUG 10344 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:50:08.037+02:00 DEBUG 10344 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:50:08.075+02:00  WARN 10344 --- [demo] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-10-09T15:50:08.086+02:00  INFO 10344 --- [demo] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-09T15:50:08.099+02:00 ERROR 10344 --- [demo] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-10-09T15:50:20.134+02:00  INFO 13532 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 13532 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:50:20.135+02:00  INFO 13532 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:50:20.678+02:00  INFO 13532 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:50:20.687+02:00  INFO 13532 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:50:20.687+02:00  INFO 13532 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:50:20.717+02:00  INFO 13532 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:50:20.717+02:00  INFO 13532 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2025-10-09T15:50:20.827+02:00 DEBUG 13532 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:50:20.867+02:00 DEBUG 13532 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:50:20.879+02:00 DEBUG 13532 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:50:20.904+02:00 DEBUG 13532 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:50:20.953+02:00  INFO 13532 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T15:50:20.958+02:00  INFO 13532 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.12 seconds (process running for 1.305)
+2025-10-09T15:50:24.899+02:00  INFO 13532 --- [demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T15:50:24.899+02:00  INFO 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T15:50:24.900+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T15:50:24.900+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T15:50:24.900+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T15:50:24.900+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6b1c2849
+2025-10-09T15:50:24.900+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@46664f99
+2025-10-09T15:50:24.901+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T15:50:24.901+02:00  INFO 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-09T15:50:24.906+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:24.912+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:24.964+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:24.966+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:24.967+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:25.507+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:25.507+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:25.509+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:25.509+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:25.510+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:25.675+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:25.675+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:25.678+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:25.678+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:25.678+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:25.833+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:25.833+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:25.835+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:25.835+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:25.835+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:25.971+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:25.972+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:25.974+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:25.974+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:25.975+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:26.115+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:26.116+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:26.118+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:26.118+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:26.118+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:47.163+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:50:47.163+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:50:47.165+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:50:47.165+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:50:47.165+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:50:50.701+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/nurse/login", parameters={}
+2025-10-09T15:50:50.701+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#login(Map)
+2025-10-09T15:50:50.710+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{username=jdoe, password=1234}]
+2025-10-09T15:50:50.717+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:50:50.718+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{success=true, message=Login correcto}]
+2025-10-09T15:50:50.723+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-10-09T15:51:04.031+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:51:04.031+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:51:04.034+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:51:04.034+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:51:04.034+02:00 DEBUG 13532 --- [demo] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:52:11.746+02:00  INFO 22196 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 22196 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:52:11.747+02:00  INFO 22196 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:52:12.274+02:00  INFO 22196 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:52:12.284+02:00  INFO 22196 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:52:12.284+02:00  INFO 22196 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:52:12.316+02:00  INFO 22196 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:52:12.316+02:00  INFO 22196 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
+2025-10-09T15:52:12.430+02:00 DEBUG 22196 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:52:12.466+02:00 DEBUG 22196 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:52:12.477+02:00 DEBUG 22196 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:52:12.502+02:00 DEBUG 22196 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:52:12.557+02:00  INFO 22196 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T15:52:12.563+02:00  INFO 22196 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.116 seconds (process running for 1.322)
+2025-10-09T15:52:18.560+02:00  INFO 22196 --- [demo] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T15:52:18.560+02:00  INFO 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T15:52:18.560+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T15:52:18.560+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T15:52:18.560+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T15:52:18.561+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7a779120
+2025-10-09T15:52:18.561+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@274a71b3
+2025-10-09T15:52:18.561+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T15:52:18.562+02:00  INFO 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-09T15:52:18.568+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:52:18.574+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:52:18.629+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:52:18.630+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:52:18.631+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:52:19.194+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:52:19.194+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:52:19.197+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:52:19.197+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:52:19.197+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:52:19.342+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:52:19.342+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:52:19.344+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:52:19.345+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:52:19.345+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:52:25.274+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/nurse/login", parameters={}
+2025-10-09T15:52:25.281+02:00  WARN 22196 --- [demo] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-10-09T15:52:25.281+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 405 METHOD_NOT_ALLOWED
+2025-10-09T15:52:25.287+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-10-09T15:52:25.289+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2025-10-09T15:52:25.303+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2025-10-09T15:52:25.310+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 405
+2025-10-09T15:52:31.265+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:52:31.266+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:52:31.269+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:52:31.269+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:52:31.269+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:52:37.616+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:52:37.617+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:52:37.619+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:52:37.619+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:52:37.620+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:53:07.326+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:53:07.327+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:53:07.329+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:53:07.329+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:53:07.329+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:53:10.957+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:53:10.957+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:53:10.959+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2025-10-09T15:53:10.960+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:53:10.960+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:53:15.545+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:53:15.546+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:53:15.548+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:53:15.548+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:53:15.549+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:53:46.796+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:53:46.797+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:53:46.799+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:53:46.799+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:53:46.799+02:00 DEBUG 22196 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:56:28.516+02:00  INFO 21428 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 21428 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:56:28.517+02:00  INFO 21428 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:56:29.062+02:00  INFO 21428 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:56:29.072+02:00  INFO 21428 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:56:29.072+02:00  INFO 21428 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:56:29.101+02:00  INFO 21428 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:56:29.102+02:00  INFO 21428 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 554 ms
+2025-10-09T15:56:29.212+02:00 DEBUG 21428 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:56:29.248+02:00 DEBUG 21428 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:56:29.260+02:00 DEBUG 21428 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:56:29.287+02:00 DEBUG 21428 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:56:29.343+02:00  INFO 21428 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T15:56:29.350+02:00  INFO 21428 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.132 seconds (process running for 1.318)
+2025-10-09T15:56:38.100+02:00  INFO 21428 --- [demo] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T15:56:38.101+02:00  INFO 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T15:56:38.101+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T15:56:38.101+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T15:56:38.101+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T15:56:38.102+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@77897d67
+2025-10-09T15:56:38.102+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@98fd7b9
+2025-10-09T15:56:38.102+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T15:56:38.102+02:00  INFO 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-09T15:56:38.108+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:56:38.115+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:56:38.180+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:56:38.181+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:56:38.183+02:00 DEBUG 21428 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T15:59:09.730+02:00  INFO 22160 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 22160 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T15:59:09.732+02:00  INFO 22160 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T15:59:10.286+02:00  INFO 22160 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T15:59:10.297+02:00  INFO 22160 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T15:59:10.297+02:00  INFO 22160 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T15:59:10.328+02:00  INFO 22160 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T15:59:10.328+02:00  INFO 22160 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 564 ms
+2025-10-09T15:59:10.441+02:00 DEBUG 22160 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T15:59:10.481+02:00 DEBUG 22160 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T15:59:10.494+02:00 DEBUG 22160 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T15:59:10.519+02:00 DEBUG 22160 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T15:59:10.587+02:00  INFO 22160 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T15:59:10.592+02:00  INFO 22160 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.164 seconds (process running for 1.353)
+2025-10-09T15:59:17.784+02:00  INFO 22160 --- [demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T15:59:17.785+02:00  INFO 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T15:59:17.785+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T15:59:17.785+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T15:59:17.785+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T15:59:17.786+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@76fd2650
+2025-10-09T15:59:17.786+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@ebd4667
+2025-10-09T15:59:17.786+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T15:59:17.786+02:00  INFO 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-09T15:59:17.793+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T15:59:17.800+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T15:59:17.859+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T15:59:17.860+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2025-10-09T15:59:17.862+02:00 DEBUG 22160 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-10-09T16:00:38.634+02:00  INFO 14104 --- [demo] [main] com.example.Nurse.DemoApplication        : Starting DemoApplication using Java 21.0.8 with PID 14104 (C:\Users\polca\git\Nurses_App\target\classes started by polca in C:\Users\polca\git\Nurses_App)
+2025-10-09T16:00:38.635+02:00  INFO 14104 --- [demo] [main] com.example.Nurse.DemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T16:00:39.187+02:00  INFO 14104 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-09T16:00:39.198+02:00  INFO 14104 --- [demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T16:00:39.199+02:00  INFO 14104 --- [demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T16:00:39.230+02:00  INFO 14104 --- [demo] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T16:00:39.230+02:00  INFO 14104 --- [demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 564 ms
+2025-10-09T16:00:39.342+02:00 DEBUG 14104 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2025-10-09T16:00:39.381+02:00 DEBUG 14104 --- [demo] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-09T16:00:39.395+02:00 DEBUG 14104 --- [demo] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-10-09T16:00:39.419+02:00 DEBUG 14104 --- [demo] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-10-09T16:00:39.474+02:00  INFO 14104 --- [demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-09T16:00:39.479+02:00  INFO 14104 --- [demo] [main] com.example.Nurse.DemoApplication        : Started DemoApplication in 1.134 seconds (process running for 1.32)
+2025-10-09T16:00:52.556+02:00  INFO 14104 --- [demo] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T16:00:52.557+02:00  INFO 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T16:00:52.557+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-10-09T16:00:52.557+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-10-09T16:00:52.557+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-10-09T16:00:52.557+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@626f9c2c
+2025-10-09T16:00:52.558+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@46c959ac
+2025-10-09T16:00:52.558+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-09T16:00:52.558+02:00  INFO 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-09T16:00:52.563+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/nurse/index", parameters={}
+2025-10-09T16:00:52.569+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.Nurse.NurseController#getAllNurses()
+2025-10-09T16:00:52.643+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-10-09T16:00:52.644+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[model.Nurse@7eb030fa, model.Nurse@38058dcc, model.Nurse@22513b28]]
+2025-10-09T16:00:52.655+02:00 DEBUG 14104 --- [demo] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

@@ -3,6 +3,8 @@ package com.example.Nurse;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RestController;
 
+import model.Nurse;
+
 import java.util.*;
 
 @Repository
