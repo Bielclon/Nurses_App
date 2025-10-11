@@ -11,6 +11,7 @@ import model.Nurse;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/nurse")
@@ -53,6 +54,20 @@ public class NurseController {
         	System.out.println(e.getMessage());
         	return ResponseEntity.notFound().build();
         }
+    }
+
+    // RodrigoMD : search nurses by name (case-insensitive, substring match)
+    @GetMapping("/search")
+    public List<Map<String, String>> findByName(@RequestParam(name = "name") String name) {
+        List<Nurse> found = nurseRepository.findByName(name);
+        return found.stream()
+                    .map(n -> {
+                        Map<String, String> m = new HashMap<>();
+                        m.put("username", n.getUsername());
+                        m.put("name", n.getName());
+                        return m;
+                    })
+                    .collect(Collectors.toList());
     }
 
 }

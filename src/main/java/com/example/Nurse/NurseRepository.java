@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import model.Nurse;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Repository
 @RestController
@@ -23,5 +24,15 @@ public class NurseRepository {
                      .filter(n -> n.getUsername().equals(username) && n.getPassword().equals(password))
                      .findFirst();
     }
+
+    // New: find nurses by name (case-insensitive, substring match)
+    public List<Nurse> findByName(String name) {
+        if (name == null || name.isEmpty()) {
+            return Collections.emptyList();
+        }
+        String lower = name.toLowerCase();
+        return nurses.stream()
+                     .filter(n -> n.getName() != null && n.getName().toLowerCase().contains(lower))
+                     .collect(Collectors.toList());
+    }
 }
- 
