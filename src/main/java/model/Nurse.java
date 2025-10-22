@@ -1,10 +1,15 @@
 package model;
 
+
+@Entity // This tells Hibernate to make a table out of this class
 public class Nurse {
-    private String username;
-    private String password;
-    private String name;
-    
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String user;
+	private String name;
+	private String password;
+	private String email;	
 
     public Nurse() {
 		super();
