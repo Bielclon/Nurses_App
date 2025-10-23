@@ -1,21 +1,21 @@
 package com.example.Nurse;
 
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import entity.Nurse;
+import repository.NurseRepository;
 
-import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/nurse")
 public class NurseController {
+	@Autowired
+	private  NurseRepository nurseRepository;
+	
 
     @PostMapping("/login")
     public Map<String, Object> login(@RequestBody Map<String, String> credentials) {
@@ -34,27 +34,15 @@ public class NurseController {
         return response;
     }
     
-    @GetMapping("/index")
-    public ResponseEntity<ArrayList<Nurse>> getAllNurses() {
-        try {
-            var resource = new ClassPathResource("static/nurses.json");
-            ObjectMapper mapper = new ObjectMapper();
+	@GetMapping("/index")
+	public ResponseEntity<List<Nurse>> getAllNurses() {
+		try {
+			return ResponseEntity.ok(nurseRepository.findAll());
+		}catch (Exception e) {
+			return ResponseEntity.notFound().build();
+		}
 
-            JsonNode root = mapper.readTree(resource.getInputStream());
-            JsonNode nursesNode = root.get("nurses");
-
-            ArrayList<Nurse> lista = mapper.readValue(
-                nursesNode.toString(),
-                mapper.getTypeFactory().constructCollectionType(ArrayList.class, Nurse.class)
-            );
-
-            return ResponseEntity.ok(lista);
-
-        } catch (IOException e) {
-        	System.out.println(e.getMessage());
-        	return ResponseEntity.notFound().build();
-        }
-    }
+	}
 /*
     // RodrigoMD : search nurses by name (case-insensitive, substring match)
     @GetMapping("/search")
