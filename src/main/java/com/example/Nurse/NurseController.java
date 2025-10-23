@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import model.Nurse;
+import entity.Nurse;
 
 import java.io.IOException;
 import java.util.*;
@@ -55,7 +55,7 @@ public class NurseController {
         	return ResponseEntity.notFound().build();
         }
     }
-
+/*
     // RodrigoMD : search nurses by name (case-insensitive, substring match)
     @GetMapping("/search")
     public List<Map<String, String>> findByName(@RequestParam(name = "name") String name) {
@@ -69,5 +69,6 @@ public class NurseController {
                     })
                     .collect(Collectors.toList());
     }
+    */
 
 }
