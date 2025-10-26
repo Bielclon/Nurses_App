@@ -43,20 +43,28 @@ public class NurseController {
 		}
 
 	}
-/*
-    // RodrigoMD : search nurses by name (case-insensitive, substring match)
-    @GetMapping("/search")
-    public List<Map<String, String>> findByName(@RequestParam(name = "name") String name) {
-        List<Nurse> found = nurseRepository.findByName(name);
-        return found.stream()
-                    .map(n -> {
-                        Map<String, String> m = new HashMap<>();
-                        m.put("username", n.getUsername());
-                        m.put("name", n.getName());
-                        return m;
-                    })
-                    .collect(Collectors.toList());
-    }
-    */
+
+	// Find a nurse by username
+	@GetMapping("/findByUser/{username}")
+	public ResponseEntity<Nurse> findByUser(@PathVariable("username") String username) {
+		try {
+			return nurseRepository.findByUsername(username)
+					.map(nurse -> ResponseEntity.ok(nurse))
+					.orElseGet(() -> ResponseEntity.notFound().build());
+		} catch (Exception e) {
+			return ResponseEntity.status(500).build();
+		}
+	}
+
+	// Find nurses by a (partial) name match
+	@GetMapping("/findByName")
+	public ResponseEntity<List<Nurse>> findByName(@RequestParam("name") String name) {
+		try {
+			List<Nurse> nurses = nurseRepository.findByNameContainingIgnoreCase(name);
+			return ResponseEntity.ok(nurses);
+		} catch (Exception e) {
+			return ResponseEntity.status(500).build();
+		}
+	}
 
 }
