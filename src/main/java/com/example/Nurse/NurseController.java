@@ -17,20 +17,43 @@ public class NurseController {
 	private  NurseRepository nurseRepository;
 	
 
-    @PostMapping("/login")
+	@PostMapping("/login")
     public Map<String, Object> login(@RequestBody Map<String, String> credentials) {
         String username = credentials.get("username");
-        String password = credentials.get("password");
+        String password = credentials.get("password"); // Contraseña en texto plano
 
         Map<String, Object> response = new HashMap<>();
 
-        if ("jdoe".equals(username) && "1234".equals(password)) {
-            response.put("success", true);
-            response.put("message", "Login correcto");
+        // 2. Buscar al 'Nurse' en la base de datos por su username
+        // (Asegúrate de tener el método 'findByUsername' en tu NurseRepository)
+        Optional<Nurse> nurseOptional = nurseRepository.findByUsername(username);
+
+        // 3. Comprobar si el 'Nurse' existe
+        if (nurseOptional.isPresent()) {
+            
+            Nurse nurse = nurseOptional.get(); // Obtiene el objeto Nurse de la BD
+            
+            // 4. Comparar la contraseña en TEXTO PLANO
+            if (password.equals(nurse.getPassword())) {
+                // Éxito: El usuario existe y la contraseña coincide
+                response.put("success", true);
+                response.put("message", "Login correcto");
+                // Opcional: puedes añadir más datos del usuario a la respuesta
+                response.put("nurseName", nurse.getName() + " " + nurse.getSurname());
+                response.put("nurseId", nurse.getId());
+
+            } else {
+                // Error: La contraseña no coincide
+                response.put("success", false);
+                response.put("message", "Usuario o contraseña incorrectos");
+            }
+
         } else {
+            // Error: El usuario no fue encontrado
             response.put("success", false);
             response.put("message", "Usuario o contraseña incorrectos");
         }
+        
         return response;
     }
     
