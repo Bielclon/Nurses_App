@@ -1,4 +1,4 @@
-package com.example.Nurse;
+package com.example.nurse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -20,4 +20,3 @@ public class DemoApplication {
       return String.format("Hello %s!", name);
     }    
    }
-
