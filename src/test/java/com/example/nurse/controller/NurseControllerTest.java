@@ -6,7 +6,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
+import org.mockito.Mockito;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import repository.NurseRepository;
@@ -24,7 +30,12 @@ import static org.mockito.Mockito.times;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(com.example.nurse.NurseController.class)
+@WebMvcTest(controllers = com.example.Nurse.NurseController.class, excludeAutoConfiguration = {
+        org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.class,
+        org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.class,
+        org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration.class
+})
+@ContextConfiguration
 public class NurseControllerTest {
 
     @Autowired
@@ -248,5 +259,21 @@ public class NurseControllerTest {
 
         mockMvc.perform(delete("/nurse/99"))
                 .andExpect(status().isNotFound());
+    }
+
+    @TestConfiguration
+    static class JpaTestConfig {
+        @Bean(name = "entityManagerFactory")
+        public Object entityManagerFactory() {
+            // Return a simple mock object registered under the 'entityManagerFactory' name
+            // Avoid referencing the actual EntityManagerFactory class to prevent classloading
+            // issues when JPA is not on the test classpath.
+            return Mockito.mock(Object.class);
+        }
+    }
+
+    @SpringBootConfiguration
+    @Import({com.example.Nurse.NurseController.class, NurseControllerTest.JpaTestConfig.class})
+    static class TestConfig {
     }
 }

@@ -1,4 +1,4 @@
-package com.example.nurse;
+package com.example.Nurse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
