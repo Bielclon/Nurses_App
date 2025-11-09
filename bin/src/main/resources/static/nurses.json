@@ -1,0 +1,7 @@
+	{
+		"nurses":[
+			{"name": "Joan", "username": "joan123", "password":"1234"},
+			{"name": "Marc", "username": "marc233", "password":"1234"},
+			{"name": "Pol", "username": "pol123", "password":"1234"}
+		]
+	}
