@@ -1,9 +1,11 @@
 package entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,6 +19,9 @@ public class Nurse {
 	private String username;
 	private String password;
 	private String email;
+	@Lob
+    @Column(name = "photo", columnDefinition = "LONGBLOB") 
+    private byte[] photo;
 	
 	public Long getId() {
 		return id;
@@ -59,4 +64,11 @@ public class Nurse {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public byte[] getPhoto() {
+        return photo;
+    }
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
+    }
 }
