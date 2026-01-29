@@ -16,45 +16,72 @@ public class NurseController {
 	@Autowired
 	private NurseRepository nurseRepository;
 
-	@PostMapping("/login")
-	public Map<String, Object> login(@RequestBody Map<String, String> credentials) {
-		String username = credentials.get("username");
-		String password = credentials.get("password"); // Contraseña en texto plano
+	// --- ENDPOINT LOGIN ---
+		@PostMapping("/login")
+		public ResponseEntity<Map<String, Object>> login(@RequestBody Map<String, String> credentials) {
+			// La App Android envía "email" (o username) y "password"
+			String emailOrUser = credentials.get("email"); 
+			if (emailOrUser == null) emailOrUser = credentials.get("username"); // Por seguridad
+			
+			String password = credentials.get("password");
 
-		Map<String, Object> response = new HashMap<>();
+			Map<String, Object> response = new HashMap<>();
 
-		// 2. Buscar al 'Nurse' en la base de datos por su username
-		// (Asegúrate de tener el método 'findByUsername' en tu NurseRepository)
-		Optional<Nurse> nurseOptional = nurseRepository.findByUsername(username);
-
-		// 3. Comprobar si el 'Nurse' existe
-		if (nurseOptional.isPresent()) {
-
-			Nurse nurse = nurseOptional.get(); // Obtiene el objeto Nurse de la BD
-
-			// 4. Comparar la contraseña en TEXTO PLANO
-			if (password.equals(nurse.getPassword())) {
-				// Éxito: El usuario existe y la contraseña coincide
-				response.put("success", true);
-				response.put("message", "Login correcto");
-				// Opcional: puedes añadir más datos del usuario a la respuesta
-				response.put("nurseName", nurse.getName() + " " + nurse.getSurname());
-				response.put("nurseId", nurse.getId());
-
-			} else {
-				// Error: La contraseña no coincide
-				response.put("success", false);
-				response.put("message", "Usuario o contraseña incorrectos");
+			// 1. Intentamos buscar por Username
+			Optional<Nurse> nurseOptional = nurseRepository.findByUsername(emailOrUser);
+			
+			// 2. Si no está, intentamos buscar por Email
+			if (nurseOptional.isEmpty()) {
+				nurseOptional = nurseRepository.findByEmail(emailOrUser);
 			}
 
-		} else {
-			// Error: El usuario no fue encontrado
+			if (nurseOptional.isPresent()) {
+				Nurse nurse = nurseOptional.get();
+				// 3. Comprobar contraseña (en texto plano según tu código actual)
+				if (password != null && password.equals(nurse.getPassword())) {
+					// LOGIN ÉXITO
+					response.put("success", true);
+					// Generamos un token simulado (en el futuro usar JWT real)
+					response.put("token", "TOKEN_FALSO_" + nurse.getId()); 
+					response.put("message", "Login correcto");
+					response.put("user", nurse); // Devolvemos datos del usuario
+					return ResponseEntity.ok(response);
+				}
+			}
+
+			// LOGIN FALLIDO
 			response.put("success", false);
-			response.put("message", "Usuario o contraseña incorrectos");
+			response.put("message", "Credenciales incorrectas");
+			return ResponseEntity.status(401).body(response);
 		}
 
-		return response;
-	}
+		// --- ENDPOINT REGISTRO ---
+		@PostMapping("/register") // Coincide con la llamada de Retrofit
+		public ResponseEntity<?> register(@RequestBody Nurse nurse) {
+			try {
+				// Validaciones básicas
+				if (nurseRepository.findByUsername(nurse.getUsername()).isPresent()) {
+					return ResponseEntity.badRequest().body(Collections.singletonMap("message", "El usuario ya existe"));
+				}
+				if (nurseRepository.findByEmail(nurse.getEmail()).isPresent()) {
+					return ResponseEntity.badRequest().body(Collections.singletonMap("message", "El email ya existe"));
+				}
+
+				// Guardar el enfermero
+				Nurse nurseGuardada = nurseRepository.save(nurse);
+
+				// Responder con formato de éxito + Token
+				Map<String, Object> response = new HashMap<>();
+				response.put("success", true);
+				response.put("token", "TOKEN_NUEVO_" + nurseGuardada.getId());
+				response.put("user", nurseGuardada);
+
+				return ResponseEntity.ok(response);
+
+			} catch (Exception e) {
+				return ResponseEntity.badRequest().body(Collections.singletonMap("message", "Error al registrar"));
+			}
+		}
 
 	@GetMapping("/index")
 	public ResponseEntity<List<Nurse>> getAllNurses() {
