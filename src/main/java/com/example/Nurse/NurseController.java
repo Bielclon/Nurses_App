@@ -41,6 +41,7 @@ public class NurseController {
 				if (password != null && password.equals(nurse.getPassword())) {
 					// LOGIN ÉXITO
 					response.put("success", true);
+					response.put("id", nurse.getId());
 					// Generamos un token simulado (en el futuro usar JWT real)
 					response.put("token", "TOKEN_FALSO_" + nurse.getId()); 
 					response.put("message", "Login correcto");
